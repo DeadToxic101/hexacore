@@ -4,4 +4,8 @@ dist/
 *.log
 .DS_Store
 .env
+.env.*
 hexacore.db
+.vite/
+coverage/
+*.tsbuildinfo
