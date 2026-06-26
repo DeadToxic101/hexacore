@@ -1,0 +1,52 @@
+{
+  "name": "hexacore",
+  "version": "0.1.0",
+  "description": "HexaCore — a gaming-focused web browser built on Electron + Chromium.",
+  "author": "HexaCore Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeadToxic101/Hexacore.git"
+  },
+  "main": "out/main/main.js",
+  "scripts": {
+    "dev": "electron-vite dev --watch",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint . --ext .ts,.tsx",
+    "package": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "dist:win": "npm run build && electron-builder --win",
+    "dist:mac": "npm run build && electron-builder --mac",
+    "dist:linux": "npm run build && electron-builder --linux",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.4",
+    "node-sqlite3-wasm": "^0.8.30",
+    "systeminformation": "^5.23.5",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "electron": "^32.0.0",
+    "electron-builder": "^25.0.5",
+    "electron-vite": "^2.3.0",
+    "framer-motion": "^11.5.4",
+    "lucide-react": "^0.439.0",
+    "postcss": "^8.4.45",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.3",
+    "vitest": "^2.1.9"
+  }
+}
